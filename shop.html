@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow"><title>KINGS Rewards · Storefront demo</title>
+  <link rel="stylesheet" href="popup.css">
+  <link rel="stylesheet" href="enrollment.css">
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#080808;color:#eeeeee;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,a{touch-action:manipulation}a{color:inherit}.demo-strip{padding:9px 20px;text-align:center;background:#171717;color:#fff;font-size:12px;letter-spacing:.02em}.site-header{max-width:1240px;margin:auto;padding:30px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #373737}.wordmark{line-height:1;text-align:center;font-size:34px;font-weight:900;letter-spacing:-2px}.wordmark small{display:block;font-size:10px;letter-spacing:.3em;margin:9px 0 0 5px}.navigation{display:flex;gap:28px;font-size:13px}.cart{font-size:13px}.page{max-width:1240px;margin:auto;padding:45px 40px 70px}.breadcrumb{font-size:12px;color:#b5b5b5;margin-bottom:28px}.product{display:grid;grid-template-columns:1.12fr 1fr;gap:64px;align-items:center}.product-art{aspect-ratio:1;background:#e2e3d7;position:relative;overflow:hidden;border-radius:3px;display:grid;place-items:center}.product-art svg{width:95%;height:95%}.art-label{position:absolute;left:24px;top:24px;padding:7px 12px;background:#f9f7ed;font-size:10px;letter-spacing:.13em}.product-art small{position:absolute;bottom:17px;font-size:10px;letter-spacing:.1em;color:#5b6253}.eyebrow{font-size:11px;letter-spacing:.18em;font-weight:700;color:#ff7900}.product h1{font:400 clamp(36px,5vw,54px)/1.07 Georgia,serif;letter-spacing:-.03em;margin:14px 0 20px}.product-copy{max-width:400px;color:#c2c2c2;font-size:15px}.price{font-size:25px;margin:23px 0 4px}.weight{font-size:12px;color:#bdbdbd}.purchase{margin-top:27px;display:flex;gap:12px;align-items:center}.quantity{display:grid;place-items:center;border:1px solid #555555;width:58px;height:52px}.add{background:#ff7900;color:#fff;border:0;padding:16px 28px;min-height:52px;font-family:inherit;font-size:14px;font-weight:600;line-height:1.4;cursor:pointer;flex:1}.add:disabled{opacity:.65}.product-notes{display:flex;gap:22px;flex-wrap:wrap;font-size:11px;margin-top:24px;border-top:1px solid #373737;padding-top:22px}.status{min-height:26px;color:#ff9c44;font-size:13px;margin-top:12px}.demo-controls{display:flex;align-items:center;justify-content:space-between;gap:22px;margin-top:50px;padding-top:24px;border-top:1px solid #373737;color:#bdbdbd;font-size:12px}.reset{border:1px solid #656565;padding:10px 15px;background:transparent;color:#eeeeee;cursor:pointer;white-space:nowrap}#demo-enrollment{margin-top:30px;padding:25px;border:1px solid #bdc4b0;background:#e8ecdf}#demo-enrollment h2{font:28px Georgia,serif;margin:0 0 10px}#demo-enrollment p{margin:0;max-width:760px}button:focus-visible,a:focus-visible{outline:3px solid #ff7900;outline-offset:4px}@media(max-width:760px){.site-header{padding:22px}.navigation{display:none}.page{padding:26px 22px 40px}.product{grid-template-columns:1fr;gap:28px}.product-art{aspect-ratio:1.15}.product h1{max-width:340px}.demo-controls{align-items:flex-start}.product-copy{max-width:none}}
+    .checkout-link{display:block;width:100%;margin-top:8px;background:#ff7900}.checkout-panel{margin-top:40px;padding:30px;background:#101010;border:1px solid #373737;border-radius:10px;max-width:700px}.checkout-panel h2{font:36px Georgia,serif;margin:10px 0}.checkout-panel>p{color:#c2c2c2}.checkout-row,.checkout-summary>div{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid #373737}.checkout-summary dd{margin:0;white-space:nowrap}.checkout-summary small{display:block;font-size:11px;color:#bdbdbd}.checkout-total{font-size:22px;font-weight:700}.quantity-controls{display:flex;align-items:center;gap:12px}.quantity-controls button{width:36px;height:36px;border:1px solid #aaa;background:#080808;cursor:pointer}.member-choice{display:block;margin-top:20px}.checkout-panel .add{width:100%}.checkout-panel[hidden]{display:none}@media(max-width:500px){.checkout-panel{padding:20px}.checkout-row{align-items:flex-start}.cart{max-width:145px;text-align:right}}
+  
+    .store-logo{width:145px;max-height:80px;object-fit:contain}.add{color:#090909}.checkout-panel .quantity-controls button{color:#fff}a{color:#ff9638}
+  </style>
+</head>
+<body>
+  <div class="demo-strip">INTERACTIVE DEMO · No purchases, registrations or customer data are submitted. <button type="button" class="reset" id="show-signup-popup">Show signup popup</button></div>
+  <header class="site-header"><img class="store-logo" src="kings-logo.svg" alt="KINGS Meat Co."><nav class="navigation" aria-label="Preview navigation"><a href="join.html">Event &amp; shop signup →</a></nav><a class="cart" href="#demo-checkout" data-checkout>Your bag <b id="cart-count">(0)</b> · Checkout →</a></header>
+  <main class="page">
+    <div class="breadcrumb">The butcher’s selection / Beef / Ribeye</div>
+    <div class="product">
+      <div class="product-art" role="img" aria-label="Illustrated premium ribeye on a dark butcher board; demonstration product">
+        <span class="art-label">THE BUTCHER’S SELECTION</span>
+        <svg viewBox="0 0 500 500" aria-hidden="true"><defs><radialGradient id="board"><stop stop-color="#41483d"/><stop offset="1" stop-color="#252c24"/></radialGradient><linearGradient id="meat" x2="1" y2="1"><stop stop-color="#a45a51"/><stop offset="1" stop-color="#703a35"/></linearGradient></defs><ellipse cx="254" cy="280" rx="191" ry="160" fill="#78816c" opacity=".17"/><g transform="rotate(-18 250 260)"><rect x="81" y="90" width="340" height="345" rx="48" fill="url(#board)"/><path d="M173 159C113 198 117 307 178 353C236 399 355 355 373 291C387 242 350 168 295 151C250 137 212 135 173 159Z" fill="#dbc1a2"/><path d="M179 168C128 200 128 301 184 341C236 382 347 345 362 288C374 245 343 181 290 163C249 149 216 146 179 168Z" fill="url(#meat)"/><path d="M177 182C195 209 239 223 246 269C251 301 292 324 336 319M157 241C200 219 217 232 232 255M182 316C208 275 258 291 283 257C305 226 336 231 346 248M228 162C211 182 230 206 256 213C280 217 289 197 286 171" fill="none" stroke="#dbac92" stroke-width="7" stroke-linecap="round"/><path d="M159 276L190 288M268 335L279 316M307 213L323 198M191 194L198 177" stroke="#e5bd9c" stroke-width="3" stroke-linecap="round"/><path d="M110 365Q157 376 185 412" stroke="#7e9770" stroke-width="3" fill="none"/><path d="M122 371L118 350M130 374L149 359M144 382L142 360M151 387L173 375M165 399L166 377M171 404L191 395" stroke="#8a9f73" stroke-width="5" stroke-linecap="round"/></g></svg>
+        <small>PRODUCT ILLUSTRATION · DEMONSTRATION ONLY</small>
+      </div>
+      <div><div class="eyebrow">EXCEPTIONAL CUTS. EVERYDAY MOMENTS.</div><h1>A cut above.<br>Premium Ribeye.</h1><p class="product-copy">Beautifully marbled. Full of flavour. A butcher’s favourite for a good meal, good company, and a little something worth celebrating.</p><div class="price">$32.00</div><div class="weight">Demo price · approximately 400 g</div><div class="purchase"><span class="quantity" aria-label="Quantity: 1">1</span><button class="add" id="add-to-cart">Add to bag — demo</button></div><div class="product-notes"><span>✓ Butcher selected</span><span>✓ Packed with care</span><span>✓ Quality comes first</span></div><p class="status" id="cart-status" role="status"></p><button class="add checkout-link" data-checkout disabled>Continue to checkout →</button></div>
+    </div>
+    <p><a href="join.html">Try the iPad / event signup page →</a> · <a href="dashboard.html">Member dashboard →</a> · <a href="review.html">Review hub →</a></p>
+    <div class="demo-controls"><span>The invitation appears after the simulated cart addition succeeds, once per shopping session. Dismiss it to keep shopping.</span><button class="reset" id="reset-demo">Reset demo session</button></div>
+    <section id="demo-checkout" class="checkout-panel" tabindex="-1" hidden>
+      <div class="eyebrow">CHECKOUT PREVIEW</div><h2>Your order</h2>
+      <p>This is a working demonstration. No payment is taken, no account is created and no order is sent.</p>
+      <div id="checkout-empty" hidden>Your bag is empty. Add a product to try checkout.</div>
+      <div id="checkout-content">
+        <div class="checkout-row"><span>Premium Ribeye · $32.00 each</span><div class="quantity-controls"><button id="qty-minus" aria-label="Remove one ribeye">−</button><strong id="checkout-qty">1</strong><button id="qty-plus" aria-label="Add one ribeye">+</button></div></div>
+        <label class="member-choice"><input type="checkbox" id="demo-member"> Preview the new-member welcome offer (simulation only)</label>
+        <p id="offer-note" class="weight"></p>
+        <dl class="checkout-summary"><div><dt>Products</dt><dd id="checkout-subtotal"></dd></div><div><dt>Welcome discount</dt><dd id="checkout-discount"></dd></div><div><dt>Delivery <small>(sample fee; approved area assumed)</small></dt><dd id="checkout-delivery"></dd></div><div class="checkout-total"><dt>Demo total</dt><dd id="checkout-total"></dd></div></dl>
+        <button class="add" id="complete-demo">Complete demo checkout — no payment</button>
+        <p id="demo-result" role="status"></p>
+      </div>
+      <a href="#add-to-cart">← Continue shopping</a>
+    </section>
+  </main>
+  <script>
+    window.KingsEnrollment = { demo: true, source: 'website', crownUrl: 'kings-crown.svg', logoUrl: 'kings-logo.svg' };
+    window.KingsRewards = { demo: true, enabled: true, isMember: false, hasAddedToCart: false, storageKey: 'kings_rewards_preview_seen', heading: 'Join KINGS Rewards and get 25% off your first order plus three free deliveries.', terms: 'Sample offers for preview. Eligibility, order minimums and delivery areas apply. Membership is optional.', joinLabel: 'Join KINGS Rewards', guestLabel: 'Continue as guest', joinUrl: 'https://example.invalid/kings-rewards-demo', logoUrl: 'kings-logo.svg' };
+  </script>
+  <script src="enrollment.js"></script>
+  <script src="popup.js"></script>
+  <script src="store.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+.kings-rewards-dialog {
+    --kr-gold: #ff7900;
+    --kr-orange: #ff7900;
+    box-sizing: border-box;
+    width: min(540px, calc(100vw - 32px));
+    max-width: none;
+    max-height: calc(100dvh - 32px);
+    margin: auto;
+    padding: 0;
+    border: 1px solid #604025;
+    border-radius: 20px;
+    background: #000000;
+    color: #ffffff;
+    box-shadow: 0 28px 100px #0008;
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    text-align: center;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+.kings-rewards-dialog:not([open]) { display: none; }
+.kings-rewards-dialog::backdrop { background: #080b08bd; backdrop-filter: blur(5px); }
+.kings-rewards-dialog * { box-sizing: border-box; }
+.kings-rewards-panel { position: relative; padding: 36px 38px 26px; background: radial-gradient(ellipse at 50% 0, #332010 0, transparent 58%); }
+.kings-rewards-dialog .kings-rewards-close {
+    position: absolute; top: 9px; right: 9px; width: 44px; height: 44px; padding: 0;
+    background: transparent; border: 0; border-radius: 50%; color: #dddddd; font: 28px/1 sans-serif; cursor: pointer;
+}
+.kings-rewards-masthead { display: flex; flex-direction: column; align-items: center; gap: 13px; margin: 0 0 22px; }
+.kings-rewards-mark { display: grid; place-items: center; width: 48px; height: 48px; border: 1px solid var(--kr-gold); color: var(--kr-gold); font: 30px/1 Georgia, serif; transform: rotate(-5deg); border-radius: 12px 3px; }
+.kings-rewards-logo { display: block; width: auto; max-width: 170px; height: auto; max-height: 70px; object-fit: contain; }
+.kings-rewards-eyebrow { color: var(--kr-gold); font-size: 11px; font-weight: 750; letter-spacing: .22em; }
+.kings-rewards-dialog .kings-rewards-heading { color: #ffffff; font: 400 clamp(25px, 5vw, 31px)/1.1 Georgia, "Times New Roman", serif; letter-spacing: -.025em; margin: 0 0 15px; text-transform: none; }
+.kings-rewards-description { color: #d5d5d5; font-size: 15px; margin: 0 auto 23px; max-width: 360px; }
+.kings-rewards-benefits { list-style: none; text-align: left; margin: 0 0 24px; padding: 0; border-top: 1px solid #ffffff1c; }
+.kings-rewards-benefits li { position: relative; padding: 13px 0 13px 28px; margin: 0; border-bottom: 1px solid #ffffff1c; font-size: 14px; }
+.kings-rewards-benefits li::before { content: '✓'; position: absolute; left: 1px; color: var(--kr-gold); font-weight: 700; }
+.kings-rewards-dialog .kings-rewards-join { display: block; width: 100%; padding: 15px 18px; border: 1px solid transparent; border-radius: 8px; background: var(--kr-orange); color: #090909; font: 750 15px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; text-decoration: none; letter-spacing: .01em; }
+.kings-rewards-dialog .kings-rewards-join:hover { background: #ff9638; color: #090909; text-decoration: none; }
+.kings-rewards-dialog .kings-rewards-guest { display: block; width: 100%; min-height: 44px; margin: 8px 0 0; padding: 11px; border: 0; border-radius: 8px; background: transparent; color: #eeeeee; font: 500 14px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; text-transform: none; cursor: pointer; }
+.kings-rewards-dialog .kings-rewards-guest:hover, .kings-rewards-dialog .kings-rewards-close:hover { background: #ffffff0d; }
+.kings-rewards-terms { color: #bdbdbd; font-size: 11px; line-height: 1.55; margin: 13px 0 0; }
+.kings-rewards-dialog :focus-visible { outline: 3px solid #ffae66; outline-offset: 3px; }
+.kings-rewards-dialog.kings-rewards-fallback { position: fixed; inset: 0; z-index: 2147483000; box-shadow: 0 0 0 100vmax #080b08bd; }
+@media (max-width: 420px) { .kings-rewards-panel { padding: 29px 23px 21px; } .kings-rewards-masthead { margin-bottom: 18px; } }
+@media (prefers-reduced-motion: no-preference) { .kings-rewards-dialog[open] { animation: kings-rewards-enter .2s ease-out; } @keyframes kings-rewards-enter { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } } }
+.kings-rewards-dialog { overflow-wrap: anywhere; }
+
+.kings-rewards-dialog [hidden] { display:none!important; }
+.kings-rewards-enrollment { margin-top:20px; }
+.kings-rewards-dialog:has(.kings-rewards-enrollment) { width:min(560px,calc(100vw - 24px)); }
+.kings-rewards-dialog:has(.kings-rewards-enrollment) .kings-rewards-masthead { gap:8px; margin-bottom:16px; }
+.kings-rewards-dialog:has(.kings-rewards-enrollment) .kings-rewards-benefits { margin-bottom:18px; }
+.kings-rewards-dialog:has(.kings-rewards-enrollment) .kings-rewards-benefits li { padding-top:9px; padding-bottom:9px; font-size:12px; }
+.kings-rewards-panel { overflow:hidden; border-radius:inherit; }
+.kings-rewards-close { z-index:3; }
+.kings-rewards-panel:has([data-success="true"]) .kings-rewards-enrollment { margin-top:0; }
+
+.kings-rewards-heading .kings-rewards-highlight-discount { color: #ff7900; }
+.kings-rewards-heading .kings-rewards-highlight-delivery { color: #ffc45b; }
